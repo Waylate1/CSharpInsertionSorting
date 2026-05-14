@@ -15,8 +15,6 @@ namespace Sorting
         public override async Task<int[]> sort(int[] arr)
         {
             int[] sortedArray = new int[arr.Length];
-            Array.Copy(arr, sortedArray, arr.Length);
-            Array.Sort(sortedArray);
 
             Random rnd = new Random();
             bool sorted = false;
@@ -31,7 +29,7 @@ namespace Sorting
                 await Task.Delay(500);
                 displayFunc(arr);
 
-                if(isSorted(arr, sortedArray))
+                if(isSorted(arr))
                 {
                     sorted = true;
                 }
@@ -40,11 +38,11 @@ namespace Sorting
             return arr;
 
         }
-        public bool isSorted(int[] a, int[] sorted)
+        public bool isSorted(int[] a)
         {
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Length - 1; i++)
             {
-                if (a[i] != sorted[i])
+                if (a[i] > a[i+1])
                 {
                     return false;
                 }
