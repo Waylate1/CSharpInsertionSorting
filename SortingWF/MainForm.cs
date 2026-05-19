@@ -23,7 +23,6 @@ namespace SortingWF
                 ToolStripMenuItem tsmi = new ToolStripMenuItem(sort.FullName, null, (sender, e) => startSort(sender, e));
                 sortsToolStripMenuItem.DropDownItems.Add(tsmi);
             }
-            Console.WriteLine("asdf");
 
             Sorting.BozoSort bs = new Sorting.BozoSort(this.displaySort);
 
@@ -54,6 +53,7 @@ namespace SortingWF
 
         public void displaySort(int[] arr)
         {
+            testArr = arr;
             displayPanel.Invalidate();
         }
 
