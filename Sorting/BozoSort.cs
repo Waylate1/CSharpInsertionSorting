@@ -8,7 +8,7 @@ namespace Sorting
 {
     public class BozoSort : Sort
     {
-        public BozoSort(Action<int[]> display) : base(display)
+        public BozoSort(Action<int[]> display) : base(display) 
         {
         }
 

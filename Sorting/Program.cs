@@ -7,14 +7,18 @@
             CancellationTokenSource cts = new CancellationTokenSource();
             int[] arr = new int[5] { 3, 4, 0, 1, 2 };
 
-            BozoSort bs2 = new BozoSort(printArr);
+            /*BozoSort bs2 = new BozoSort(printArr);
 
             arr = bs2.sort(arr, cts.Token).Result;
-
+            */
             /*BubbleSort bs = new BubbleSort(printArr);
 
-            arr = bs.sort(arr);
+            arr = bs.sort(arr, cts.Token).Result;
             */
+
+            InsertionSort Is = new InsertionSort(printArr);
+
+            arr = Is.sort(arr, cts.Token).Result;
 
             Console.WriteLine(isSorted(arr));
 
